@@ -23,8 +23,15 @@ class Category:
     def checkFunds(self, amount):
         return amount <= self.get_balance(amount) # Check if the amount is less than the balance got.
 
-    def transfer(self, amount, Category):
-        # Add code.
+    def transfer(self, amount, category):
+        if (self.checkFunds(amount)):
+            slef.withdraw(amount, f"Transfer to {Category}")
+            category.deposit(amount, f"Transfer from {self.name}")
+            return True
+        else:
+            return False
 
-    #def create_spend_chart(categories):
+    def __str__(self):
+        title =
+#def create_spend_chart(categories):
     
